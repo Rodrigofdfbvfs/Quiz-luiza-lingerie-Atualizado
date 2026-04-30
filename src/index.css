@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 345 40% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 345 40% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 345 40% 15%;
+
+    --primary: 345 60% 25%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 345 20% 95%;
+    --secondary-foreground: 345 40% 15%;
+
+    --muted: 345 10% 95%;
+    --muted-foreground: 345 10% 45%;
+
+    --accent: 345 60% 25%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 345 15% 88%;
+    --input: 345 15% 88%;
+    --ring: 345 60% 25%;
+
+    --radius: 0.75rem;
+
+    --wine: 345 60% 25%;
+    --wine-light: 345 40% 35%;
+    --wine-dark: 345 70% 18%;
+    --wine-bg: 345 30% 96%;
+    --gold: 40 90% 55%;
+    --success: 145 60% 40%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .quiz-card {
+    @apply bg-card border border-border rounded-xl p-4 cursor-pointer transition-all duration-200;
+  }
+  .quiz-card:hover {
+    @apply border-primary shadow-md;
+    transform: translateY(-2px);
+  }
+  .quiz-card-selected {
+    @apply border-primary bg-secondary shadow-md;
+    border-width: 2px;
+  }
+  .quiz-btn {
+    @apply w-full py-4 rounded-xl font-bold text-lg tracking-wide transition-all duration-200;
+    background: hsl(var(--wine));
+    color: hsl(var(--primary-foreground));
+  }
+  .quiz-btn:hover {
+    background: hsl(var(--wine-dark));
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px hsl(var(--wine) / 0.3);
+  }
+  .quiz-progress-bar {
+    @apply h-2 rounded-full transition-all duration-500 ease-out;
+    background: hsl(var(--wine));
+  }
+  .quiz-progress-track {
+    @apply h-2 rounded-full w-full;
+    background: hsl(var(--border));
+  }
+}

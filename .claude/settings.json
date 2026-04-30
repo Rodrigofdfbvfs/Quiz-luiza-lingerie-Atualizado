@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx vite *)",
+      "Bash(git init *)",
+      "Bash(git remote *)",
+      "PowerShell(git -C \"c:\\\\Users\\\\Lpmelo\\\\Downloads\\\\quiz-calcinhas\" status 2>&1)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\Lpmelo\\Downloads\\quiz-calcinhas\\.git"
+    ]
+  }
+}
